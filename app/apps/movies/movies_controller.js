@@ -12,7 +12,11 @@ define(['application', 'apps/movies/movies_view', 'apps/movies/entities/movie'],
         view.on('childview:remove', function(childView) {
           movies.remove(childView.model)
         });
-        
+
+        view.on('childview:member:add', function(childView){
+          Application.trigger('contacts:list:show');
+        });
+
       }
     };
   });
