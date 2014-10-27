@@ -3,10 +3,16 @@ define(['application', 'apps/movies/movies_view', 'apps/movies/entities/movie'],
     MoviesApp.Controller = {
       showList: function(){
         var movies = Application.request('movies:entities');
+        var view = new View.ListView({collection: movies});
+
         movies.fetch().done(function(){
-          var view = new View.ListView({collection: movies});
           Application.mainRegion.show(view);
-        })
+        });
+
+        view.on('childview:remove', function(childView) {
+          movies.remove(childView.model)
+        });
+        
       }
     };
   });
