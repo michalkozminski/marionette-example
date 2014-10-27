@@ -1,0 +1,17 @@
+{
+    "name": "marionette-structure-example",
+    "version": "0.0.1",
+    "dependencies": {
+        "requirejs":                    "latest",
+        "require-handlebars-plugin":    "latest",
+        "jquery":                       "latest",
+        "backbone.marionette":          "latest",
+        "backbone.wreqr":               "latest",
+        "backbone.syphon":              "latest",
+        "backbone.babysitter":          "latest",
+        "backbone.validation":          "latest",
+        "underscore-amd":               "latest",
+        "backbone-amd":                 "latest"
+    },
+    "devDependencies": {}
+}
