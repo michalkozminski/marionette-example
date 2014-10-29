@@ -3,6 +3,7 @@ define(['application', 'apps/contacts/contacts_view', 'apps/contacts/entities/us
     Contacts.Controller = {
       showList: function(movie){
         var contacts = Application.request('contacts:entities');
+
         var view = new View.ListView({collection: contacts});
         contacts.fetch().done(function(){
           Application.modalRegion.show(view);
