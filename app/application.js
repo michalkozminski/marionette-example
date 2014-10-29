@@ -1,10 +1,18 @@
-define(["backbone", "backbone.marionette"], function(Backbone) {
+define(["backbone", "backbone.marionette", "jquery", "bootstrap"], function(Backbone, ModalRegion, jQuery) {
   var App = new Backbone.Marionette.Application();
 
   App.addRegions(
     {
       mainRegion:  '#main'
-    , modalRegion: '#modal'
+    , modalRegion: Marionette.Region.extend({
+        el: '#modal'
+      , onShow: function() {
+        jQuery('.modal').modal('show');
+      }
+      , onEmpty: function(){
+        jQuery('.modal').modal('hide');
+      }
+    })
     }
   );
 

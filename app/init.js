@@ -8,7 +8,8 @@ require.config({
         backbone: {
             deps: ["underscore", "jquery"],
             exports: "Backbone"
-        }
+        },
+        "bootstrap" : { "deps" :['jquery'] }
     },
     paths: {
         jquery: "/bower_components/jquery/dist/jquery",
@@ -21,7 +22,8 @@ require.config({
         "backbone.validation": "/bower_components/backbone.validation/dist/backbone-validation-amd",
         "backbone-relational": "/bower_components/backbone-relational/backbone-relational",
         handlebars: '/bower_components/require-handlebars-plugin/Handlebars',
-        hbs: '/bower_components/require-handlebars-plugin/hbs'
+        hbs: '/bower_components/require-handlebars-plugin/hbs',
+        "bootstrap" :  "//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min"
     },
     hbs: {
         disableI18n: true
