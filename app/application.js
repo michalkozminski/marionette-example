@@ -3,7 +3,8 @@ define(["backbone", "backbone.marionette"], function(Backbone) {
 
   App.addRegions(
     {
-      mainRegion: '#main'
+      mainRegion:  '#main'
+    , modalRegion: '#modal'
     }
   );
 

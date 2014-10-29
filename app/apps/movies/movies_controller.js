@@ -14,7 +14,7 @@ define(['application', 'apps/movies/movies_view', 'apps/movies/entities/movie'],
         });
 
         view.on('childview:member:add', function(childView){
-          Application.trigger('contacts:list:show');
+          Application.trigger('contacts:list:show', childView.model);
         });
 
       }
