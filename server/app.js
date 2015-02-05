@@ -24,4 +24,5 @@ app.get('/', function(req, res){
 
 // start server
 app.listen(3000);
+console.log('Visit app at: http://localhost:3000/#list');
 
